@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1 class="text-red-500 text-7xl font-bold">Welcome Page</h1>
+    {{ $slot }}
 </body>
 
 </html>
