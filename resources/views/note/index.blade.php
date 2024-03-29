@@ -4,7 +4,9 @@
             <p
                 class="font-semibold text-3xl text-neutral-700 relative after:absolute after:bg-yellow-500 after:h-1 after:left-0 after:w-full after:-bottom-2">
                 New Notes</p>
-            <button class=""></button>
+            <a href="{{ route('note.create') }}"
+                class="bg-yellow-200 px-10 flex items-center rounded-md hover:bg-yellow-300 ease-in-out duration-200">New
+                Note</a>
         </div>
 
         <div class="pt-10 grid grid-cols-3 auto-rows-auto gap-6">
