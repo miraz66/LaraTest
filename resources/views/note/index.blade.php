@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="max-w-4xl mx-auto py-20">
+    <div class="max-w-4xl mx-auto py-20 grid col-span-3 auto-rows-auto">
         <p
             class="font-semibold text-3xl text-neutral-700 relative after:absolute after:bg-yellow-500 after:h-1 after:left-0 after:w-full after:-bottom-2">
             New Notes</p>
