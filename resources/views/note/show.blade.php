@@ -8,7 +8,7 @@
             </div>
             <div class="pt-10 flex gap-5">
                 <a class="text-white rounded-sm bg-neutral-500 px-8 py-2 hover:bg-slate-600 duration-200"
-                    href="">Edit</a>
+                    href="{{ route('note.edit', $note) }}">Edit</a>
                 <button class="bg-red-500 px-8 py-2 rounded-sm text-white hover:bg-red-400 duration-200">Delete</button>
             </div>
         </div>
