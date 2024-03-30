@@ -4,9 +4,7 @@
             <form action="{{ route('note.store') }}" method="POST">
                 @csrf
                 <textarea rows="10" name="note" class="text-neutral-600 h-[35rem] w-[35rem] p-5 bg-yellow-50"
-                    placeholder="Enter Your Note here.">
-                    
-                </textarea>
+                    placeholder="Enter Your New Note here..."></textarea>
                 <div class="pt-10 flex gap-5">
                     <a class="text-white rounded-sm bg-neutral-500 px-8 py-2 hover:bg-slate-600 duration-200"
                         href="{{ route('note.index') }}">Cancel</a>

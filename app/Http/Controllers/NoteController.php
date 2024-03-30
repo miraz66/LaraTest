@@ -10,12 +10,16 @@ class NoteController extends Controller
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
-        $notes = Note::query()->orderBy('created_at', 'desc')->paginate(9);
-        return view("note.index", ['notes' => $notes]);
+        $notes = Note::query()
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
 
+        return view("note.index", compact('notes'));
     }
+
 
     /**
      * Show the form for creating a new resource.
