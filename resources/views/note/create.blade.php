@@ -1,7 +1,7 @@
 <x-layout>
     <div class="h-screen flex items-center">
         <div class="py-10 max-w-2xl px-14 mx-auto bg-yellow-100 rounded-xl shadow-xl">
-            <form action="{{ route('note.store', $note) }}">
+            <form action="{{ route('note.store') }}" method="POST">
                 @csrf
                 <textarea rows="10" name="note" class="text-neutral-600 h-[35rem] w-[35rem] p-5 bg-yellow-50"
                     placeholder="Enter Your Note here.">

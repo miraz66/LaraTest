@@ -22,8 +22,14 @@
                             href="{{ route('note.show', $notes) }}">View</a>
                         <a class="text-white rounded-md bg-neutral-500 px-4 py-1 hover:bg-slate-600 duration-200"
                             href="{{ route('note.edit', $notes) }}">Edit</a>
-                        <button
-                            class="bg-red-500 px-6 py-1 rounded-md text-white hover:bg-red-400 duration-200">Delete</button>
+
+                        <form action="{{ route('note.destroy', $notes) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="bg-red-500 px-8 py-2 rounded-sm text-white hover:bg-red-400 duration-200">
+                                Delete
+                            </button>
+                        </form>
                     </div>
                 </div>
             @endforeach

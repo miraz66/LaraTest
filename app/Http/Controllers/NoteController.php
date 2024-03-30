@@ -36,7 +36,7 @@ class NoteController extends Controller
         $data['user_id'] = 1;
         $note = Note::create($data);
 
-        return to_route('note.show', $note)->with('message', 'Note created successfully');
+        return to_route('note.index', $note)->with('messages', 'Note created successfully');
     }
 
     /**
@@ -60,7 +60,12 @@ class NoteController extends Controller
      */
     public function update(Request $request, Note $note)
     {
-        return view("note.update");
+        $data = $request->validate([
+            'note' => ['required', 'string'],
+        ]);
+        $note->update($data);
+
+        return to_route('note.index', $note)->with('messages', 'Note Update successfully');
     }
 
     /**
@@ -68,6 +73,7 @@ class NoteController extends Controller
      */
     public function destroy(Note $note)
     {
-        return view("note.destroy");
+        $note->delete();
+        return to_route('note.index', $note)->with('messages', 'Note Delete successfully');
     }
 }
