@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <div class="max-w-5xl mx-auto py-20 ">
         <div class="flex justify-between">
             <p
@@ -21,9 +21,9 @@
                         <dd class="text-sm py-2 font-serif">{{ $note->created_at }}</dd>
                     </div>
                     <div class="pt-4 flex gap-5">
-                        <a class="text-white rounded-md bg-neutral-500 px-4 py-1 hover:bg-slate-600 duration-200"
+                        <a class="text-white rounded-md bg-neutral-500 px-4 py-1 hover:bg-slate-600 duration-200 flex items-center"
                             href="{{ route('note.show', $note) }}">View</a>
-                        <a class="text-white rounded-md bg-neutral-500 px-4 py-1 hover:bg-slate-600 duration-200"
+                        <a class="text-white rounded-md bg-neutral-500 px-4 py-1 hover:bg-slate-600 duration-200 flex items-center"
                             href="{{ route('note.edit', $note) }}">Edit</a>
 
                         <form action="{{ route('note.destroy', $note) }}" method="POST">
@@ -42,4 +42,4 @@
             {{ $notes->links('pagination::tailwind') }}
         </div>
     </div>
-</x-layout>
+</x-app-layout>

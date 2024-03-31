@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <div class="h-screen flex items-center">
         <div class="py-10 max-w-2xl px-14 mx-auto bg-yellow-100 rounded-xl shadow-xl">
             <form action="{{ route('note.store') }}" method="POST">
@@ -14,4 +14,4 @@
             </form>
         </div>
     </div>
-</x-layout>
+</x-app-layout>
