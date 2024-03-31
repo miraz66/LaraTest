@@ -27,7 +27,7 @@ class NoteController extends Controller
      */
     public function create(Note $note)
     {
-        if ($note->user_id != auth()->user()->id) {
+        if ($note->user_id != request()->user()->id) {
             abort(403);
         }
 
@@ -53,7 +53,7 @@ class NoteController extends Controller
      */
     public function show(Note $note)
     {
-        if ($note->user_id != auth()->user()->id) {
+        if ($note->user_id != request()->user()->id) {
             abort(403);
         }
 
@@ -65,7 +65,7 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
-        if ($note->user_id != auth()->user()->id) {
+        if ($note->user_id != request()->user()->id) {
             abort(403);
         }
 
@@ -77,7 +77,7 @@ class NoteController extends Controller
      */
     public function update(Request $request, Note $note)
     {
-        if ($note->user_id != auth()->user()->id) {
+        if ($note->user_id != request()->user()->id) {
             abort(403);
         }
 
@@ -94,7 +94,7 @@ class NoteController extends Controller
      */
     public function destroy(Note $note)
     {
-        if ($note->user_id != auth()->user()->id) {
+        if ($note->user_id != request()->user()->id) {
             abort(403);
         }
 
